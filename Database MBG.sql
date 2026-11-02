@@ -58,13 +58,11 @@ CREATE TABLE umpan_balik (
     FOREIGN KEY (id_pengguna) REFERENCES pengguna(id_pengguna) ON DELETE CASCADE
 );
 
-
-
 INSERT INTO sekolah (nama_sekolah, alamat, npsn) VALUES
-('SDN 02 Mojorejo Taman',  'Jl. Abdul Rahman Saleh No. 1',  '20534262'),
-('SDN 01 Taman',  'Jl. Kemiri No. 1',   '20534131'),
-('SMPN 4 Madiun',  'Jl. Abdul Rahman Saleh No. 3',   ' 20534168'),
-('SMAN 1 Madiun','Jl. Mastrip No.19',   '20534125');  
+('SDN 02 Mojorejo Taman',  'Jl. Abdul Rahman Saleh No. 1', '20534262'),
+('SDN 01 Taman',  'Jl. Kemiri No. 1', '20534131'),
+('SMPN 4 Madiun',  'Jl. Abdul Rahman Saleh No. 3', '20534168'),
+('SMAN 1 Madiun','Jl. Mastrip No.19', '20534125');  
  
 INSERT INTO pengguna (nama, username, password, peran, id_sekolah) VALUES
 ('Titiek',  'titiek',  'titiekwati_1', 'guru', 1),
@@ -74,12 +72,12 @@ INSERT INTO pengguna (nama, username, password, peran, id_sekolah) VALUES
  
 INSERT INTO sppg (nama_sppg, divisi, wilayah) VALUES
 ('SPPG Mojorejo', 'Distribusi', 'Kel. Mojorejo'),
-('SPPG Kota Madiun Taman Demangan',    'Distribusi', 'Kel. Demangan');
+('SPPG Kota Madiun Taman Demangan', 'Distribusi', 'Kel. Demangan');
  
 INSERT INTO menu (nama_menu, deskripsi, tanggal_menu) VALUES
 ('Nasi Ayam Sayur', 'Nasi, ayam goreng, tumis sayur', '2026-10-26'),
-('Nasi Ikan Tahu',  'Nasi, ikan, tahu, lalapan',      '2026-10-27'),
-('Nasi Telur Bayam','Nasi, telur, sayur bayam',       '2026-10-28');
+('Nasi Ikan Tahu',  'Nasi, ikan, tahu, lalapan', '2026-10-27'),
+('Nasi Telur Bayam','Nasi, telur, sayur bayam', '2026-10-28');
  
 INSERT INTO distribusi
 (tanggal, waktu_tiba, jumlah_porsi, kondisi_makanan, tingkat_sisa_makanan, id_sppg, id_sekolah, id_menu) VALUES
@@ -93,6 +91,6 @@ INSERT INTO distribusi
 ('2026-10-27','11:15:00',310,'Baik','Rendah',1,3,2);
  
 INSERT INTO umpan_balik (jenis, isi, tingkat_kepuasan, tanggal, id_pengguna) VALUES
-('Saran', 'Porsi sayur ditambah',        'Puas',        '2026-10-26', 1),
-('Keluhan','Makanan agak dingin',        'Kurang puas', '2026-10-27', 2),
-('Pujian', 'Menu variatif dan enak',     'Sangat puas', '2026-10-28', 3);
+('Saran', 'Porsi sayur ditambah', 'Puas', '2026-10-26', 1),
+('Keluhan','Makanan agak dingin', 'Kurang puas', '2026-10-27', 2),
+('Pujian', 'Menu variatif dan enak', 'Sangat puas', '2026-10-28', 3);
