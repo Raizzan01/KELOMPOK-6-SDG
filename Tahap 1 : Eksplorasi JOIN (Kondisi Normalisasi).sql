@@ -1,5 +1,4 @@
 USE db_distribusi_mbg;
-
 SELECT s.id_sekolah,
        s.nama_sekolah,
        COUNT(d.id_distribusi) AS jumlah_distribusi,
