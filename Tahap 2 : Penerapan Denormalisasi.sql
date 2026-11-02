@@ -1,5 +1,4 @@
 USE db_distribusi_mbg;
-
 ALTER TABLE sekolah add column total_porsi int default 0;
 
 UPDATE sekolah s
